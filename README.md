@@ -72,7 +72,7 @@ You'll need your own API key for The Echo Nest. Visit https://developer.echonest
 
  Then, within app/scripts/app.js, add in your key:
 
-     RocknrollcallYeoman.config = {
+     App.config = {
          ECHO_NEST_API_KEY: "Your API key" // Get an API Key here: http://developer.echonest.com/account/register
      }
 

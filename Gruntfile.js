@@ -1,4 +1,4 @@
-// Generated on 2014-04-16 using generator-ember 0.8.3
+// Generated on 2014-07-28 using generator-ember 0.8.4
 'use strict';
 var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
@@ -134,7 +134,7 @@ module.exports = function (grunt) {
                 imagesDir: '<%= yeoman.app %>/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: 'app/bower_components',
+                importPath: '<%= yeoman.app %>/bower_components',
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/styles/fonts',
@@ -262,19 +262,18 @@ module.exports = function (grunt) {
         copy: {
             fonts: {
                 files: [
-                    { 
+                    {
                         expand: true,
                         flatten: true,
                         filter: 'isFile',
                         cwd: '<%= yeoman.app %>/bower_components/',
                         dest: '<%= yeoman.app %>/styles/fonts/',
-                        src: [ 
-                            'bootstrap-sass/dist/fonts/**', // Bootstrap
-                            'font-awesome/fonts/**' // Font-Awesome
+                        src: [
+                            'bootstrap-sass-official/vendor/assets/fonts/bootstrap/**'
                         ]
                     }
                 ]
-            },
+            }, 
             dist: {
                 files: [
                     {
@@ -318,7 +317,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    '.tmp/scripts/compiled-templates.js': '<%= yeoman.app %>/templates/{,*/}*.hbs'
+                    '.tmp/scripts/compiled-templates.js': '<%= yeoman.app %>/templates/**/*.hbs'
                 }
             }
         },

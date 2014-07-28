@@ -1,5 +1,6 @@
-RocknrollcallYeoman.ApplicationController = Em.ObjectController.extend({
+App.ApplicationController = Em.ArrayController.extend({
   searchTerms: '',
+
   applicationName: function() {
     var st = this.get('searchTerms');
     if (st) {
@@ -8,9 +9,10 @@ RocknrollcallYeoman.ApplicationController = Em.ObjectController.extend({
       return "Rock'n'Roll Call"
     }
   }.property('searchTerms'),
+
   actions: {
     submit: function() {
-      this.transitionToRoute('search-results',this.get('searchTerms'));
+      this.transitionToRoute('search-results', this.get('searchTerms'));
     }
   }
 });

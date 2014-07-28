@@ -1,1 +1,1 @@
-RocknrollcallYeoman.ActivityLogComponent = Ember.Component.extend({});
+App.ActivityLogComponent = Ember.Component.extend({});

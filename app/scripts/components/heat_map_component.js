@@ -1,4 +1,4 @@
-RocknrollcallYeoman.HeatMapComponent = Ember.Component.extend({
+App.HeatMapComponent = Ember.Component.extend({
   margin: { top: 50, right: 0, bottom: 100, left: 30 },
   width: 900,
   height: 280,
