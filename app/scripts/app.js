@@ -1,5 +1,7 @@
 var App = window.App = Ember.Application.create();
 
+App.applicationName = "Rock'n'Roll Call";
+
 /* Order and include as you please. */
 require('scripts/controllers/*');
 require('scripts/store');
