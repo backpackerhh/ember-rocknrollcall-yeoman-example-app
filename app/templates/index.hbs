@@ -19,6 +19,7 @@
         <ul class="search-results artists">
           {{#each App.dummySearchResultsArtists}}
             <li><a {{action 'viewedArtist' this}}>{{name}}</a></li>
+            {{hotttnesss-badge hotttnesss}}
           {{/each}}
         </ul>
         <h3>Songs</h3>
