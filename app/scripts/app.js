@@ -5,6 +5,10 @@ var App = window.App = Ember.Application.create({
 
 App.applicationName = "Rock'n'Roll Call";
 
+App.config = {
+  ECHO_NEST_API_KEY: '<YOUR API KEY>'
+}
+
 /* Order and include as you please. */
 require('scripts/controllers/*');
 require('scripts/store');
