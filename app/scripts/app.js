@@ -3,8 +3,6 @@ var App = window.App = Ember.Application.create({
   LOG_ACTIVE_GENERATION: true
 });
 
-App.applicationName = "Rock'n'Roll Call";
-
 App.config = {
   ECHO_NEST_API_KEY: '<YOUR API KEY>'
 }

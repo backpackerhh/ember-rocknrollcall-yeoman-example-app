@@ -1,12 +1,12 @@
 App.SongRoute = Ember.Route.extend({
   model: function(params) {
-    //find the song byId
-    var url = "http://developer.echonest.com/api/v4/song/profile?api_key=" + App.config.ECHO_NEST_API_KEY + "&format=json&bucket=audio_summary&bucket=song_hotttnesss&bucket=tracks&bucket=song_type&bucket=id:7digital-US";
-    var obj = { "id": params.enid };
+    var url = 'http://developer.echonest.com/api/v4/song/profile?api_key=' + App.config.ECHO_NEST_API_KEY + '&format=json&bucket=audio_summary&bucket=song_hotttnesss&bucket=tracks&bucket=song_type&bucket=id:7digital-US';
+    var obj = { 'id': params.enid };
 
     return Ember.$.getJSON(url, obj).then(function(data) {
       var entry = data.response.songs[0];
       var track = null;
+
       if (entry.tracks.length) track = entry.tracks[0];
 
       return App.Song.create({

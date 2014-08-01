@@ -2,9 +2,9 @@ App.ApplicationController = Em.ArrayController.extend({
   searchTerms: '',
 
   applicationName: function() {
-    var st = this.get('searchTerms');
-    if (st) {
-      return st + "???"
+    var term = this.get('searchTerms');
+    if (term) {
+      return term + '???'
     } else {
       return "Rock'n'Roll Call"
     }

@@ -14,9 +14,7 @@
       {{/if}}
     {{/if}}
     <h3 class="fancy">{{model.name}}</h3>
-    <h4>
-      {{hotttnesss-badge model.hotttnesss}}
-    </h4>
+    <h4>{{hotttnesss-badge model.hotttnesss}}</h4>
     <p class="bio pull-left">Biography(from {{model.biography.site}}): {{model.biography.text}}</p>
     <a {{bind-attr href="model.biography.url"}} class="pull-left">Read more</a>
   </div>
